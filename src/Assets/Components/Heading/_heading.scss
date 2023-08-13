@@ -1,0 +1,37 @@
+@import "../../../colors.scss";
+
+.heading {
+    font-family: 'Epilogue', sans-serif;
+
+}
+
+.heading__title {
+    color: $primary-black;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 105%;
+}
+
+.heading__subtitle {
+    color: $text-gray;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.yellow-marker {
+    position: relative;
+    display: inline-block;
+}
+
+.yellow-marker::after {
+    z-index: -1;
+    top: 20px;
+    left: -24px;
+    position: absolute;
+    display: inline;
+    content: "";
+    width: 364px;
+    height: 36px;
+    background: #FFD900;
+}

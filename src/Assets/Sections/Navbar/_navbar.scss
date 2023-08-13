@@ -1,0 +1,5 @@
+@import "../../../mixins";
+
+.navbar {
+    @include grid-width(12);
+}

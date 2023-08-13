@@ -1,0 +1,111 @@
+.heading {
+  font-family: "Epilogue", sans-serif;
+}
+
+.heading__title {
+  color: #292F36;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 105%;
+}
+
+.heading__subtitle {
+  color: #5E5E70;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.yellow-marker {
+  position: relative;
+  display: inline-block;
+}
+
+.yellow-marker::after {
+  z-index: -1;
+  top: 20px;
+  left: -24px;
+  position: absolute;
+  display: inline;
+  content: "";
+  width: 364px;
+  height: 36px;
+  background: #FFD900;
+}
+
+.button {
+  font-family: Outfit;
+  padding: 12px 36px;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.button__primary {
+  color: var(--bello-secondary, #163B40);
+  border: 2px solid var(--bello-secondary, #163B40);
+  background: var(--bello-primary, #01F680);
+  box-shadow: 0px 4px 0px 0px #163B40;
+}
+
+.hero__container {
+  box-sizing: content-box;
+  grid-column: 1/13;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 72px 0 72px 160px;
+}
+
+.hero__container .heading {
+  min-width: 520px;
+  width: 40%;
+}
+
+.hero__container .button {
+  max-width: 250px;
+}
+
+.hero__multitasking {
+  width: 590px;
+  height: 590px;
+}
+
+.navbar {
+  grid-column: 1/13;
+}
+
+.cta__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: url("../src/Resources/gridpatternblack.png");
+  background-size: 20%;
+}
+
+.bello_container {
+  box-sizing: content-box;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 32px;
+  padding: 0 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
