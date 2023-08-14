@@ -4,8 +4,8 @@ import { ReactComponent as _Multitasking } from "../../Resources/multitasking.sv
 
 function Multitasking(props) {
     return (
-        <div className="ilustration_wrapper">
-            <_Multitasking className={props.className} />
+        <div className={props.className}>
+            <_Multitasking />
         </div>
     );
 }

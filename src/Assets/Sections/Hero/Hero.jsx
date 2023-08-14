@@ -7,7 +7,23 @@ export function Hero() {
     return (
         <div className="hero__container">
             <CTA />
-            <Multitasking className="hero__multitasking" />
+            <div className="hero__ilustration">
+                <Multitasking className="hero__multitasking" />
+                <div className="avatar-group--left">
+                    <div className="human_avatar human_avatar_1" />
+                    <div className="human_avatar human_avatar_2" />
+                    <div className="human_avatar human_avatar_3" />
+                    <div className="human_avatar human_avatar_4" />
+                </div>
+
+                <div className="avatar-group--right">
+                    <div className="human_avatar human_avatar_1" />
+                    <div className="human_avatar human_avatar_2" />
+                    <div className="human_avatar human_avatar_3" />
+                    <div className="human_avatar human_avatar_4" />
+                </div>
+
+            </div>
         </div>
     );
 }

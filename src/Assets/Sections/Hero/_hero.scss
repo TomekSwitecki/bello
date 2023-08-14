@@ -1,4 +1,22 @@
 @import "../../../mixins";
+$animation-duration: 4s; // Duration of one complete animation cycle
+$animation-offset: 1s; // Time offset for individual image animations
+
+@mixin sinusoidal-animation($offset) {
+    animation: sinusoidal $animation-duration infinite ease-in-out $offset;
+}
+
+@keyframes sinusoidal {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px); // Adjust the amplitude of the sinusoidal motion
+    }
+}
 
 .hero__container {
     box-sizing: content-box;
@@ -8,21 +26,73 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 72px 0 72px 160px;
+    padding: 0 0 72px 160px;
 
     .heading {
         min-width: 520px;
         width: 40%;
     }
 
-    .button {
-        max-width: 250px;
+}
+
+.hero__ilustration {
+    position: relative;
+    margin-left: 50px;
+
+    .human_avatar {
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    // .ilustration_wrapper {
-    //     position: relative;
-    //     left: 150px;
-    // }
+    .avatar-group--right {
+        position: relative;
+        left: -25px;
+        top: -578px;
+        transform: scaleX(-1);
+    }
+
+    .avatar-group--left,
+    .avatar-group--right {
+        .human_avatar_1 {
+            @include sinusoidal-animation(-2 * $animation-offset);
+            top: 80px;
+            left: -70px;
+            width: 70px;
+            height: 70px;
+            background-image: url("/src/Resources/Avatars/Avatar.png");
+
+        }
+
+        .human_avatar_2 {
+            @include sinusoidal-animation(-$animation-offset);
+            top: 370px;
+            left: -70px;
+            width: 65px;
+            height: 65px;
+            background-image: url("/src/Resources/Avatars/Avatar1.png");
+        }
+
+        .human_avatar_3 {
+            @include sinusoidal-animation(-$animation-offset);
+
+            top: 265px;
+            left: -174px;
+            width: 35px;
+            height: 35px;
+            background-image: url("/src/Resources/Avatars/Avatar2.png");
+        }
+
+        .human_avatar_4 {
+            @include sinusoidal-animation(-$animation-offset);
+            top: 220px;
+            width: 53px;
+            height: 53px;
+            background-image: url("/src/Resources/Avatars/Avatar3.png");
+        }
+    }
+
+
 }
 
 .hero__multitasking {

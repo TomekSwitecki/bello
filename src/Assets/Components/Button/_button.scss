@@ -6,47 +6,34 @@
     border-radius: 4px;
     font-size: 16px;
     font-weight: 700;
+
+
+    &.button__filled {
+        &--primary {
+            color: var(--bello-secondary, #163B40);
+            border: 2px solid var(--bello-secondary, #163B40);
+            background: var(--bello-primary, #01F680);
+            box-shadow: 0px 4px 0px 0px #163B40;
+        }
+
+        &--black {
+            color: var(--white, #FFF);
+            border: 2px solid var(--primary-black-darker, #23282E);
+            background: var(--primary-black, #292F36);
+            box-shadow: 0px 4px 0px 0px #23282E;
+        }
+    }
+
+    &.button__outlined {
+        &--black {
+            border-radius: 7px;
+            border: 2px solid var(--outline, rgba(0, 0, 0, 0.20));
+            background: var(--white, #FFF);
+            box-shadow: 0px 4px 0px 0px #CCC;
+        }
+    }
 }
 
-// .button__text {
-//     text-shadow: $primary-button-text-shadow;
-// }
-
-// .button:hover {
-//     cursor: pointer;
-// }
-
-.button__primary {
-    color: var(--bello-secondary, #163B40);
-    border: 2px solid var(--bello-secondary, #163B40);
-    background: var(--bello-primary, #01F680);
-    box-shadow: 0px 4px 0px 0px #163B40;
+.button:hover {
+    cursor: pointer;
 }
-
-// .button__primary:hover {
-//     border-radius: 6px;
-//     box-shadow: $primary-button-shadow-hover;
-//     letter-spacing: 0.2px;
-//     transition: all 0.4s ease-in-out;
-// }
-
-// .button__ghost {
-//     background: none;
-//     padding: 8px 32px;
-//     color: $button-default-gray;
-// }
-
-// .button__ghost:hover {
-//     color: $primary-text-color;
-// }
-
-// .button__appended {
-//     gap: 4px;
-//     padding: 12px 24px;
-// }
-
-// .button__append {
-//     fill: $white;
-//     display: flex;
-//     align-self: center;
-// }

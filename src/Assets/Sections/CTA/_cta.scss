@@ -1,5 +1,29 @@
+@import "../../../colors.scss";
+
 .cta__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    .typing-word {
+        display: block;
+    }
+}
+
+.cta__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    .button__primary {
+        width: 250px;
+    }
+}
+
+.cta__sparkle {
+    position: absolute;
+    width: auto;
+    top: -24px;
+    left: -24px;
 }

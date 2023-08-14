@@ -6,6 +6,10 @@ img {
   user-select: none;
 }
 
+svg {
+  width: inherit;
+  height: inherit;
+}
 
 * {
   margin: 0;
@@ -27,4 +31,56 @@ body {
   padding: 0 64px;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+
+
+.yellow-marker {
+  position: relative;
+  display: block
+}
+
+.yellow-marker::after {
+  z-index: -1;
+  top: 20px;
+  left: 0;
+  position: absolute;
+  display: inline;
+  content: "";
+  width: 100%;
+  min-width: 25px;
+  height: 36px;
+  background: #FFD900;
+  padding-right: 50px;
+}
+
+.typing-word-wrapper {
+  display: inline-flex;
+}
+
+
+.typing-word--empty {
+  visibility: hidden;
+  width: 1px;
+}
+
+.typing-word__cursor::after {
+
+  content: "";
+  display: inline-flex;
+  width: 4px;
+  margin-left: 10px;
+  height: 67px;
+  background-color: #292F36;
+  animation: blink 0.5s ease infinite alternate-reverse;
+
+  @keyframes blink {
+    from {
+      opacity: 100%;
+    }
+
+    to {
+      opacity: 0%;
+    }
+  }
 }
