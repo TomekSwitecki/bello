@@ -1,8 +1,12 @@
 @use "../src/Assets/Components/Heading/heading";
 @use "../src/Assets/Components/Button/button";
+@use "../src/Assets/Components/Section/section";
+@use "../src//Assets/Components/Marker/marker";
+@use "../src/Assets/Components/Label/label";
+
 
 @use "../src/Assets/Sections/Hero/hero";
 @use "../src/Assets/Sections/Navbar/navbar";
 @use "../src/Assets/Sections/CTA/cta";
-
+@use "../src/Assets/Sections/LogoSlider/logos";
 @use "../src//mixins";

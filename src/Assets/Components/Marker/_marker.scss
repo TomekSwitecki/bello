@@ -1,0 +1,30 @@
+@import "../../../colors.scss";
+
+.marker {
+    position: relative;
+
+    &::after {
+        z-index: -1;
+        top: 20px;
+        left: 0;
+        position: absolute;
+        display: inline;
+        content: "";
+        width: 100%;
+        min-width: 25px;
+        height: 36px;
+        padding-right: 10px;
+    }
+
+    &--yellow {
+        &::after {
+            background: $yellow;
+        }
+    }
+
+    &--blue {
+        &::after {
+            background: $blue;
+        }
+    }
+}

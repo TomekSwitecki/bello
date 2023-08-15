@@ -1,0 +1,74 @@
+@import "../../../colors.scss";
+
+@mixin heading() {
+    color: $primary-black;
+    font-family: Epilogue;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 105%;
+}
+
+@mixin subheading() {
+    color: $text-gray;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.section__container {
+    padding: 64px 160px;
+    display: flex;
+    max-width: 1440px;
+    grid-column: 1 / span 12;
+    width: 100%;
+
+    &--column {
+        flex-direction: column;
+    }
+
+    &--row {
+        .section__heading--column {
+            flex-basis: 50%;
+        }
+    }
+}
+
+.section__heading {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 64px;
+    flex-direction: column;
+    transition: all 500ms ease-in-out;
+
+    &--row {
+        .section__subtitle {
+            flex-basis: 50%;
+        }
+
+        flex-direction: row;
+        justify-content: space-between
+    }
+}
+
+
+.section__title {
+    @include heading();
+}
+
+.section__subtitle {
+    @include subheading();
+}
+
+.section__embedded-content {
+    display: flex;
+    justify-content: center;
+}
+
+.section__embedded-content {
+    padding: 0px 128px;
+    flex-grow: 1;
+
+}

@@ -1,0 +1,22 @@
+@import "../../../colors.scss";
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.label__text {
+    color: $primary-black;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.label__prepend {
+    width: 24px;
+    height: 24px;
+    fill: $purple;
+}

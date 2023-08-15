@@ -12,6 +12,7 @@ svg {
 }
 
 * {
+  transition: all 500ms ease-in-out;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -34,25 +35,6 @@ body {
 }
 
 
-
-.yellow-marker {
-  position: relative;
-  display: block
-}
-
-.yellow-marker::after {
-  z-index: -1;
-  top: 20px;
-  left: 0;
-  position: absolute;
-  display: inline;
-  content: "";
-  width: 100%;
-  min-width: 25px;
-  height: 36px;
-  background: #FFD900;
-  padding-right: 50px;
-}
 
 .typing-word-wrapper {
   display: inline-flex;

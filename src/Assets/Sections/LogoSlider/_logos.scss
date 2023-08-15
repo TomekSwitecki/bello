@@ -1,0 +1,8 @@
+@import "../../../mixins";
+
+.logos {
+    @include grid-width(12);
+    opacity: 50%;
+    mix-blend-mode: hard-light;
+    background: white;
+}

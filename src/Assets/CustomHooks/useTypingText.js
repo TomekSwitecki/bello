@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Marker } from '../Components/Marker/Marker';
 
 const FORWARD = 'forward';
 const BACKWARD = 'backward';
@@ -67,7 +68,7 @@ const useTypingText = (
     return {
         word: (
             <span className="typing-word-wrapper">
-                <span className="yellow-marker"><div className={`typing-word ${currentWord.length ? 'typing-word--full' : 'typing-word--empty'}`}>{currentWord.length ? currentWord.join('') : '|'}</div></span>
+                <Marker><div className={`typing-word ${currentWord.length ? 'typing-word--full' : 'typing-word--empty'}`}>{currentWord.length ? currentWord.join('') : '|'}</div></Marker>
                 <div className='typing-word__cursor'></div>
             </span >
         ),
