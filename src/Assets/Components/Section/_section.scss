@@ -23,7 +23,7 @@
     display: flex;
     max-width: 1440px;
     grid-column: 1 / span 12;
-    width: 100%;
+
 
     &--column {
         flex-direction: column;
@@ -68,7 +68,5 @@
 }
 
 .section__embedded-content {
-    padding: 0px 128px;
     flex-grow: 1;
-
 }

@@ -1,0 +1,29 @@
+@import "../../../colors.scss";
+
+.vertical-card {
+    box-sizing: border-box;
+    font-family: Epilogue;
+    display: flex;
+    padding: 20px 50px 10px 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 317px;
+
+    border-radius: 12px;
+    border: 2px solid var(--primary-black, #292F36);
+    background: $blue;
+    box-shadow: 0px -11px 0px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+
+    .button {
+        padding: 6px 36px;
+    }
+
+}
+
+
+.vertical-card__ilustration {
+    max-width: 215px;
+}

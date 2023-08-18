@@ -25,7 +25,6 @@ body {
 }
 
 .bello_container {
-  box-sizing: content-box;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 32px;
