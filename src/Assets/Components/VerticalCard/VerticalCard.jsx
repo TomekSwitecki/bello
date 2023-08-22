@@ -1,20 +1,29 @@
 import React from 'react';
 import Button, { ButtonType, ButtonColor } from '../Button/Button';
-import digitalProccess from "../../../Resources/digital-proccess.png";
 
-const VerticalCard = ({ title, imageSrc, description }) => {
+
+export const CardColor = {
+    Blue: "blue",
+    Red: "red",
+    Yellow: "yellow",
+};
+
+const VerticalCard = ({ title, imageSrc, description, color }) => {
+
+
+    const cardClass = `vertical-card vertical-card--${color}`;
 
 
     return (
-        <div className="vertical-card">
-            <h2 className="card-title">{title}</h2>
-            <p className="card-description">{description}</p>
+        <div className={cardClass}>
+            <h2 className="vertical-card__title">{title}</h2>
+            <p className="vertical-card__description">{description}</p>
             <Button
                 type={ButtonType.Filled}
                 color={ButtonColor.Primary}
                 text="Learn more!"
             />
-            <img className='vertical-card__ilustration' src={digitalProccess}></img>
+            <img className='vertical-card__ilustration' src={imageSrc}></img>
         </div>
     );
 };

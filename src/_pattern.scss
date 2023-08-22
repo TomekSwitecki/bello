@@ -1,0 +1,23 @@
+@mixin grid-pattern($color) {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+
+    @if $color =='black' {
+        background-image: url("/src/Resources/gridpatternblack.png");
+        opacity: 1;
+    }
+
+    @else {
+        background-image: url("/src/Resources/gridpattern.png");
+    }
+
+
+    background-size: cover;
+    z-index: 0;
+}
