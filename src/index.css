@@ -34,14 +34,14 @@
 
 .button.button__filled--black {
   color: #FFFFFF;
-  border: 2px solid var(--primary-black-darker, #23282E);
+  border: 2px solid #23282E;
   background: #292F36;
   box-shadow: 0px 4px 0px 0px #23282E;
 }
 
 .button.button__outlined--black {
   border-radius: 7px;
-  border: 2px solid var(--outline, rgba(0, 0, 0, 0.2));
+  border: 2px solid #000000;
   background: #FFFFFF;
   box-shadow: 0px 4px 0px 0px #CCC;
 }
@@ -164,10 +164,16 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  max-width: 317px;
+  max-width: 315px;
   border-radius: 12px;
   border: 2px solid #292F36;
   box-shadow: 0px -11px 0px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.vertical-card .vertical-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .vertical-card .vertical-card__title,
@@ -190,21 +196,19 @@
 .vertical-card .vertical-card__description {
   font-size: 15px;
   font-weight: 600;
+  margin-bottom: 32px;
 }
 
 .vertical-card .button {
   padding: 6px 36px;
 }
 
-.vertical-card--red {
+.vertical-card--red, .vertical-card--blue {
   background-color: #FF5776;
-}
-
-.vertical-card--red .vertical-card__title {
   color: #FFFFFF;
 }
 
-.vertical-card--red .vertical-card__description {
+.vertical-card--red .vertical-card__description, .vertical-card--blue .vertical-card__description {
   color: hsla(0, 0%, 100%, 0.8);
 }
 
@@ -212,21 +216,16 @@
   background-color: #0FA0FF;
 }
 
-.vertical-card--blue .vertical-card__title {
-  color: #FFFFFF;
-}
-
-.vertical-card--blue .vertical-card__description {
-  color: hsla(0, 0%, 100%, 0.8);
-}
-
 .vertical-card--yellow {
   background-color: #FFD900;
   color: #292F36;
 }
 
-.vertical-card--blue:before,
-.vertical-card--red:before {
+.vertical-card--yellow .vertical-card__description {
+  color: #5E5E70;
+}
+
+.vertical-card--blue:before, .vertical-card--red:before {
   content: " ";
   display: block;
   position: absolute;
@@ -255,8 +254,67 @@
   z-index: 0;
 }
 
-.vertical-card__ilustration {
+.vertical-card .vertical-card__ilustration {
   max-width: 215px;
+}
+
+.icon-avatar {
+  position: relative;
+  box-sizing: border-box;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: 3px solid #292F36;
+}
+
+.icon-avatar--purple {
+  background-color: #9867FF;
+}
+
+.icon-avatar--red {
+  background-color: #FF5776;
+}
+
+.icon-avatar--blue {
+  background-color: #0FA0FF;
+}
+
+.icon-avatar--yellow {
+  background-color: #FFD900;
+}
+
+.icon-avatar--yellow > svg {
+  color: #292F36;
+}
+
+.icon-avatar--blue > svg, .icon-avatar--purple > svg, .icon-avatar--red > svg {
+  color: #FFFFFF;
+}
+
+.icon-avatar > svg {
+  stroke-width: 2.25px;
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0px 4px 0px hsla(212, 14%, 19%, 0.2));
+}
+
+.icon-avatar::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-size: 50%;
+  background-repeat: repeat;
+  background-image: url("/src/Resources/checkerpattern.png");
+  z-index: 0;
+  border-radius: 100%;
 }
 
 @keyframes sinusoidal {
