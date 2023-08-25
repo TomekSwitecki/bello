@@ -13,7 +13,7 @@ export function Section(props) {
         "section__heading",
         {
             [`section__heading--${props.headingDir}`]: props.headingDir,
-
+            "section__heading--centered": props.headingCentered,
         }
     );
     return (

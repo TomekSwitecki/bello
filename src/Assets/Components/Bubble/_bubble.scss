@@ -1,0 +1,98 @@
+@import "../../../colors.scss";
+
+.bubble {
+    position: absolute;
+    display: inline-flex;
+    min-width: 210px;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 43px;
+    background: $primary-light-gray;
+    box-shadow: 0px 2px 0px 0px #C7CBD2, 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+
+    color: $primary-black;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 18px;
+
+    font-weight: 500;
+    line-height: 105%;
+    white-space: nowrap;
+
+    &#variant_0 {
+        animation: move 25s linear 2s infinite, jiggle cubic-bezier(0.37, 0, 0.63, 1) 1.4s infinite;
+    }
+
+    &#variant_1 {
+        animation: move 25s linear 2s infinite, jiggle cubic-bezier(0.37, 0, 0.63, 1) 1.9s infinite;
+    }
+
+    &#variant_2 {
+        animation: move 25s linear 2s infinite, jiggle cubic-bezier(0.37, 0, 0.63, 1) 2.1s infinite;
+    }
+
+    &#variant_3 {
+        animation: move 25s linear 2s infinite, jiggle cubic-bezier(0.37, 0, 0.63, 1) 2.1s infinite;
+    }
+
+    &#variant_4 {
+        animation: move 25s linear 2s infinite, jiggle cubic-bezier(0.37, 0, 0.63, 1) 1.8s infinite;
+    }
+
+    &#variant_5 {
+        animation: move 25s linear 2s infinite, jiggle cubic-bezier(0.37, 0, 0.63, 1) 2s infinite;
+    }
+
+
+}
+
+
+.bubble-container {
+    height: 430px;
+    width: 1120px;
+    position: relative;
+    overflow: hidden;
+    padding: 12px 0;
+
+
+}
+
+.bubble-container::before {
+    z-index: 5;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 49.48%, #FFF 100%);
+}
+
+
+
+@keyframes move {
+    0% {
+        left: -450px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: translateY(-8px);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(-8px);
+    }
+}
