@@ -24,6 +24,17 @@ body {
   background-size: 20%;
 }
 
+h2 {
+  color: $primary-black;
+  text-align: center;
+  font-family: Epilogue;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 105%;
+
+}
+
 .bello_container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

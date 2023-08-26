@@ -1,6 +1,7 @@
 import { Section } from "./Assets/Components/Section/Section";
 import BubblesSection from "./Assets/Sections/BubblesSection/BubblesSection";
 import { Hero } from "./Assets/Sections/Hero/Hero";
+import { HowWeDoIt } from "./Assets/Sections/HowWeDoIt/HowWeDoIt";
 import Logos from "./Assets/Sections/LogoSlider/Logos";
 import { Navbar } from "./Assets/Sections/Navbar/Navbar";
 import { WhatDoWeDo } from "./Assets/Sections/WhatDoWeDo/WhatDoWeDo";
@@ -12,7 +13,8 @@ function App() {
       <Logos />
       <WhatDoWeDo />
       <BubblesSection />
-    </div>
+      <HowWeDoIt />
+    </div >
   );
 }
 

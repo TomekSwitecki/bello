@@ -1,0 +1,54 @@
+@import "../../../colors.scss";
+@import "../../../anim.scss";
+
+.tag {
+    display: flex;
+    padding: 12px 20px;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+
+    box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.25) inset;
+
+    &--blue {
+        color: $white;
+        background-color: $blue;
+    }
+
+    &--red {
+        color: $white;
+        background-color: $red;
+    }
+
+    &--yellow {
+        color: $primary-black;
+        background-color: $yellow;
+    }
+
+    &--purple {
+        color: $white;
+        background-color: $purple;
+    }
+
+    &--primary {
+        color: $primary-black;
+        background-color: $bello-primary;
+    }
+
+}
+
+.tag--content {
+
+    font-family: Epilogue;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.tag:hover {
+    @include hover(false);
+}

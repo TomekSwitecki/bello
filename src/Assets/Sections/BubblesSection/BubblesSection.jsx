@@ -12,7 +12,6 @@ function BubblesSection() {
         { name: '🎨 Design a user interface', offsetY: 0, animationDelay: '0s' },
         { name: '🛠️ Code a new feature', offsetY: -90, animationDelay: '1s' },
         { name: '📱 Mobile app optimization', offsetY: 90, animationDelay: '2.5s' },
-
         { name: '📚 Learn a new design tool', offsetY: -160, animationDelay: '3s' },
         { name: '📊 Analyze user metrics', offsetY: 180, animationDelay: '8.2s' },
         { name: '💡 Brainstorm new ideas', offsetY: 180, animationDelay: '-1s' },
@@ -22,7 +21,6 @@ function BubblesSection() {
         { name: '🔧 Debugging and fixing', offsetY: 70, animationDelay: '-4.2s' },
         { name: '📄 Write technical documentation', offsetY: 90, animationDelay: '-0.5s' },
         { name: '💬 UX design review', offsetY: 50, animationDelay: '-15s' },
-
         { name: '📐 Wireframing', offsetY: 0, animationDelay: '-17.5s' },
         { name: '🔍 Usability testing', offsetY: -100, animationDelay: '-14s' },
         { name: '📊 Data visualization', offsetY: -70, animationDelay: '-17s' },
@@ -32,11 +30,9 @@ function BubblesSection() {
         { name: '🔧 Fix cross-browser issues', offsetY: -185, animationDelay: '-2.5s' },
         { name: '📝 Write clean code', offsetY: -0, animationDelay: '-9s' },
         { name: '🔍 Accessibility audit', offsetY: -150, animationDelay: '-9.2s' },
-
         { name: '📈 Performance optimization', offsetY: 0, animationDelay: '4s' },
         { name: '🔍 User feedback analysis', offsetY: -30, animationDelay: '-12s' },
         { name: '🛠️ Develop a responsive layout', offsetY: 90, animationDelay: '-10s' },
-
     ];
 
 
