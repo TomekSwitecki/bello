@@ -3,18 +3,22 @@ import BubblesSection from "./Assets/Sections/BubblesSection/BubblesSection";
 import { Hero } from "./Assets/Sections/Hero/Hero";
 import { HowWeDoIt } from "./Assets/Sections/HowWeDoIt/HowWeDoIt";
 import Logos from "./Assets/Sections/LogoSlider/Logos";
-import { Navbar } from "./Assets/Sections/Navbar/Navbar";
 import { WhatDoWeDo } from "./Assets/Sections/WhatDoWeDo/WhatDoWeDo";
+import { Navbar } from "./Assets/Sections/Navbar/Navbar";
+import { Fragment } from "react";
 function App() {
   return (
-    <div className="bello_container">
+    <Fragment>
       <Navbar />
-      <Hero />
-      <Logos />
-      <WhatDoWeDo />
-      <BubblesSection />
-      <HowWeDoIt />
-    </div >
+      <div className="bello_container">
+
+        <Hero />
+        <Logos />
+        <WhatDoWeDo />
+        <BubblesSection />
+        <HowWeDoIt />
+      </div >
+    </Fragment>
   );
 }
 

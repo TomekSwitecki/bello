@@ -15,8 +15,11 @@ export const ButtonColor = {
 function Button(props) {
     const { type, color, text, append, onClick } = props;
 
-    const buttonClass = `button button__${color} button__${type}--${color} ${append ? "button__appended" : ""
-        }`;
+    const colorClass = color ? `button--${color}` : '';
+    const appendedClass = append ? 'button__appended' : '';
+
+    const buttonClass = `button button--${type} ${colorClass} ${appendedClass}`;
+
 
     return (
         <button className={buttonClass} onClick={onClick}>

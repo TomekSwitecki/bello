@@ -1,0 +1,89 @@
+$mobile-small: 360px;
+$mobile-medium: 375px;
+$mobile-large: 411px;
+$small-tablet: 650px;
+$tablet: 800px;
+$laptop: 1024px;
+$high-res: 1300px;
+$desktop: 1920px;
+
+//  map holding breakpoint values
+$breakpoints: (
+    mobile-small: $mobile-small,
+    mobile-medium: $mobile-medium,
+    mobile-large: $mobile-large,
+    tablet: $tablet,
+    laptop: $laptop,
+    high-res: $high-res,
+    desktop: $desktop
+);
+
+
+@mixin breakpoints($keys...) {
+    @each $key in $keys {
+        @media (min-width: map-get($breakpoints, $key)) {
+            @content
+        }
+    }
+}
+
+
+@mixin mobile-small {
+    @media (max-width: $mobile-small) {
+        @content;
+    }
+}
+
+@mixin mobile-medium {
+    @media (min-width: $mobile-medium) and (max-width: $mobile-large) {
+        @content;
+    }
+}
+
+@mixin mobile-large {
+    @media (min-width: $mobile-large) and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin tablet--span {
+    @media (min-width: $tablet) and (max-width: $laptop) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin laptop--span {
+    @media (min-width: $laptop) and (max-width: $high-res) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: $laptop) {
+        @content;
+    }
+}
+
+@mixin high-res--span {
+    @media (min-width: $high-res) and (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin high-res {
+    @media (max-width: $high-res) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}

@@ -1,5 +1,105 @@
 @import "../../../mixins";
+@import "../../Components/HamburgerMenu/hamburgerMenu";
 
 .navbar {
-    @include grid-width(12);
+  width: 100%;
+  position: fixed;
+  display: flex;
+
+  z-index: 15;
+  justify-content: center;
+  border-bottom: 2px solid $outline;
+  background: $white;
+  @include smooth;
+}
+
+
+.navbar__content {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  padding: 24px 64px;
+  @include smooth;
+}
+
+.navbar__buttons--middle {
+  .button--primary {
+    display: none;
+    margin-left: 32px;
+  }
+}
+
+.navbar__buttons--right {
+  flex-direction: row;
+  gap: 16px;
+}
+
+.navbar__buttons--middle,
+.navbar__buttons--right {
+  display: flex;
+  @include smooth;
+}
+
+
+//Media Queries
+
+
+
+
+@media (max-width: $high-res) {
+
+  .navbar__content {
+    gap: 16px;
+    align-items: normal;
+    padding: 24px 32px;
+  }
+
+  .navbar__buttons--right {
+    display: none;
+  }
+
+  .navbar__buttons--middle {
+    .button--primary {
+      display: flex;
+    }
+
+    justify-content: center;
+  }
+
+  .button {
+    padding: 12px 12px;
+  }
+
+  .button--outlined {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet) {
+
+  .navbar__content {
+    flex-direction: column;
+  }
+
+  .navbar__buttons--middle {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: $small-tablet) {
+  .navbar__buttons--middle {
+    display: none;
+  }
+
+  .navbar__content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

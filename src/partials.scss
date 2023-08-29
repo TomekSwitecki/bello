@@ -8,12 +8,13 @@
 @use "../src/Assets/Components/Bubble/bubble";
 @use "../src/Assets/Components/PlainCard/plain-card";
 @use "../src/Assets/Components/Tag/tag";
+@use "../src/Assets/Components/Logo/logo";
+@use "../src/Assets/Components/HamburgerMenu/hamburgerMenu";
 
-
-@use "../src/Assets/Sections/Hero/hero";
 @use "../src/Assets/Sections/Navbar/navbar";
+@use "../src/Assets/Sections/Hero/hero";
 @use "../src/Assets/Sections/CTA/cta";
 @use "../src/Assets/Sections/LogoSlider/logos";
 @use "../src/Assets/Sections/WhatDoWeDo/what-do-we-do";
 @use "../src/Assets/Sections/HowWeDoIt/how-we-do-it";
-@use "../src//mixins";
+@use "../src/mixins";
