@@ -1,5 +1,6 @@
 @import "partials";
 @import "colors";
+@import "mixins";
 
 img {
   pointer-events: none;
@@ -42,6 +43,7 @@ h2 {
   padding: 0 64px;
   max-width: 1440px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 

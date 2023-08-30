@@ -33,7 +33,7 @@ $animation-offset: 1s; // Time offset for individual image animations
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0 72px 160px;
+    padding: 0 64px 72px 64px;
     margin-top: 96px;
     background: url("/src/Resources/dots_bg.png");
     background-repeat: no-repeat;
@@ -44,13 +44,16 @@ $animation-offset: 1s; // Time offset for individual image animations
         width: 40%;
     }
 
+    @include smooth();
 }
 
 .hero__ilustration {
     position: relative;
     margin-left: 50px;
+    @include smooth();
 
     .human_avatar {
+        z-index: -1;
         position: absolute;
         background-size: contain;
         background-repeat: no-repeat;
@@ -149,6 +152,7 @@ $animation-offset: 1s; // Time offset for individual image animations
 .hero__multitasking {
     width: 590px;
     height: 590px;
+    @include smooth();
 }
 
 @keyframes random-movement {
@@ -173,4 +177,61 @@ $animation-offset: 1s; // Time offset for individual image animations
 
 .hero__multitasking {
     animation: random-movement 6s infinite ease-in-out;
+}
+
+@media (max-width: $high-res) {
+    .hero__container {
+        padding: 0 0 72px 0;
+        @include smooth();
+    }
+
+    .hero__multitasking {
+        width: 450px;
+        @include smooth();
+    }
+
+    .avatar-group--right,
+    .avatar-group--left {}
+}
+
+@media (max-width: $laptop) {
+    .hero__ilustration {
+        position: relative;
+        margin-left: -238px;
+        opacity: 0.25;
+        z-index: -1;
+        transition: all 0.66s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+}
+
+@media (max-width: $small-tablet) {
+    .hero__ilustration {
+        position: relative;
+        margin-left: 50px;
+        left: -443px;
+        top: -55px;
+        z-index: -10;
+        opacity: 0.05;
+        @include smooth();
+    }
+
+    .hero__multitasking {
+        width: 550px;
+        @include smooth();
+    }
+
+    .avatar-group--right,
+    .avatar-group--left {
+        display: none;
+    }
+
+    .hero__container {
+        .heading {
+            width: 100%;
+            min-width: unset;
+        }
+    }
+
+
+
 }
