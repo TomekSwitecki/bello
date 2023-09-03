@@ -6,6 +6,7 @@ import Logos from "./Assets/Sections/LogoSlider/Logos";
 import { WhatDoWeDo } from "./Assets/Sections/WhatDoWeDo/WhatDoWeDo";
 import { Navbar } from "./Assets/Sections/Navbar/Navbar";
 import { Fragment } from "react";
+import { BrandSection } from "./Assets/Sections/BrandSection/BrandSection";
 function App() {
   return (
     <Fragment>
@@ -17,6 +18,7 @@ function App() {
         <WhatDoWeDo />
         <BubblesSection />
         <HowWeDoIt />
+        <BrandSection />
       </div >
     </Fragment>
   );

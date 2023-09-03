@@ -69,7 +69,19 @@
 
 .section__embedded-content {
     display: flex;
-    justify-content: center;
+
+
+    &.section__embedded-content--start {
+        justify-content: start;
+    }
+
+    &.section__embedded-content--center {
+        justify-content: center;
+    }
+
+    &.section__embedded-content--end {
+        justify-content: end;
+    }
 }
 
 .section__embedded-content {

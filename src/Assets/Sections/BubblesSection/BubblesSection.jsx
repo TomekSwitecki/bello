@@ -63,6 +63,7 @@ function BubblesSection() {
                 id="bubbles"
                 dir="column"
                 headingDir="column"
+                justifyContent="center"
                 headingCentered
             >
                 <div className='bubble-container'>

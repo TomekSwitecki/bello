@@ -12,7 +12,7 @@ export function WhatDoWeDo() {
 
     return (
         <React.Fragment>
-            <Section sectionTitle={title} sectionSubtitle={subtitle} id="about_us" dir="column" headingDir="row" >
+            <Section sectionTitle={title} sectionSubtitle={subtitle} id="about_us" dir="column" headingDir="row" justifyContent="center" >
                 <div className='cards_container'>
                     <VerticalCard iconAvatar={<IconAvatar color={AvatarColor.Yellow} icon={<PencilPaper />} />} color={CardColor.Blue} title={Card1_Title} description={Card1_Description} imageSrc={digitalProccess}></VerticalCard>
                     <VerticalCard iconAvatar={<IconAvatar color={AvatarColor.Blue} icon={<Anchor />} />} color={CardColor.Red} title={Card2_Title} description={Card1_Description} imageSrc={newFunctions}></VerticalCard>

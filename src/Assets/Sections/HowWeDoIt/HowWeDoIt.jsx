@@ -10,10 +10,9 @@ import message from "../../../Resources/Palms/message.png";
 import work from "../../../Resources/Palms/work.png";
 import PlainCard from '../../Components/PlainCard/PlainCard';
 export function HowWeDoIt() {
-
     return (
         <React.Fragment>
-            <Section sectionTitle={title} sectionSubtitle={subtitle} id="how_we_do_it" dir="column" headingDir="column" headingCentered>
+            <Section sectionTitle={title} sectionSubtitle={subtitle} id="how_we_do_it" dir="column" headingDir="column" justifyContent="center" headingCentered>
                 <div className='cards__container'>
                     <h2>This is how we do it</h2>
                     <div className='cards__row--top'>
