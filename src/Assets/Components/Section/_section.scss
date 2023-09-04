@@ -28,6 +28,7 @@
 
     &--column {
         flex-direction: column;
+        overflow-y: clip;
     }
 
     &--row {

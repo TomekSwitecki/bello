@@ -17,8 +17,10 @@
 .vernon-wrapper {
     pointer-events: none;
     position: relative;
+    height: fit-content;
     top: -40px;
     left: 65px;
+    @include smooth();
 }
 
 .crossed-out {
@@ -114,6 +116,52 @@
                 stroke-width: 3;
 
             }
+        }
+    }
+}
+
+@media (max-width: $laptop) {
+
+    .card-wrapper__row {
+        flex-direction: column;
+    }
+
+    .vernon-wrapper {
+        top: 230px;
+        @include smooth();
+    }
+}
+
+
+
+@media (max-width: $tablet) {
+    .card-wrapper {
+        width: 100%;
+    }
+
+    .card-wrapper__row {
+        flex-direction: column;
+    }
+
+    .card-wrapper__row:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    .vernon-wrapper {
+        top: 130px;
+        left: 15px;
+        @include smooth();
+    }
+
+    #guidelines,
+    #colab {
+        align-self: flex-end;
+    }
+
+    #brand_section {
+        .section__embedded-content {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
