@@ -141,14 +141,16 @@
 
     .card-wrapper__row {
         flex-direction: column;
+        margin-bottom: 24px;
     }
 
     .card-wrapper__row:nth-child(2) {
         flex-direction: column-reverse;
+
     }
 
     .vernon-wrapper {
-        top: 130px;
+        top: 85px;
         left: 15px;
         @include smooth();
     }

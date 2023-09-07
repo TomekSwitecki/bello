@@ -13,7 +13,7 @@ const PlainCard = ({ title, imageSrc, description, type, iconAvatar, tag }) => {
         <div className={cardClass}>
             {iconAvatar}
             <div className='plain-card__content'>
-                {tag}
+                {type != "plain" && tag}
                 <div>
                     <h2 className="plain-card__title">{title}</h2>
                     <p className="plain-card__description">{description}</p>

@@ -22,7 +22,7 @@
     z-index: 0;
 }
 
-@mixin checker-pattern() {
+@mixin checker-pattern($border-radius: 0, $opacity: 0.05, $background-size: 50%) {
     content: ' ';
     display: block;
     position: absolute;
@@ -30,11 +30,11 @@
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.05;
-    background-size: 50%;
+    opacity: $opacity;
+    background-size: $background-size;
     background-repeat: repeat;
     background-image: url("/src/Resources/checkerpattern.png");
-
+    border-radius: $border-radius;
     z-index: 0;
-    border-radius: 100%;
+
 }

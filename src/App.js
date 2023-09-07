@@ -7,6 +7,7 @@ import { WhatDoWeDo } from "./Assets/Sections/WhatDoWeDo/WhatDoWeDo";
 import { Navbar } from "./Assets/Sections/Navbar/Navbar";
 import { Fragment } from "react";
 import { BrandSection } from "./Assets/Sections/BrandSection/BrandSection";
+import { DesignSection } from "./Assets/Sections/DesignSection/DesignSection";
 function App() {
   return (
     <Fragment>
@@ -19,6 +20,7 @@ function App() {
         <BubblesSection />
         <HowWeDoIt />
         <BrandSection />
+        <DesignSection />
       </div >
     </Fragment>
   );

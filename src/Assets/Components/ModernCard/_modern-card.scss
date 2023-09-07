@@ -15,7 +15,7 @@
     border-radius: 10px;
 
     max-width: 360px;
-    min-width: 230px;
+    min-width: 360px;
     height: fit-content;
     overflow: hidden;
 
@@ -38,6 +38,7 @@
 
         .modern-card__description {
             color: $text-white-text-light;
+
 
             strong {
                 font-weight: 600;
@@ -111,7 +112,7 @@
         font-family: Outfit;
         font-size: 16px;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 500;
         line-height: normal;
         line-height: 25px;
     }

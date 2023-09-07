@@ -54,6 +54,6 @@ $icon-size: 32px;
     }
 
     &::before {
-        @include checker-pattern;
+        @include checker-pattern(99px);
     }
 }

@@ -1,0 +1,10 @@
+#design_section {
+    .card-wrapper {
+        flex-direction: row;
+        display: flex;
+        gap: 0px;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+}
