@@ -8,6 +8,7 @@ import { Navbar } from "./Assets/Sections/Navbar/Navbar";
 import { Fragment } from "react";
 import { BrandSection } from "./Assets/Sections/BrandSection/BrandSection";
 import { DesignSection } from "./Assets/Sections/DesignSection/DesignSection";
+import { BriliantExcecution } from "./Assets/Sections/BriliantExecution/BriliantExecution";
 function App() {
   return (
     <Fragment>
@@ -21,6 +22,7 @@ function App() {
         <HowWeDoIt />
         <BrandSection />
         <DesignSection />
+        <BriliantExcecution />
       </div >
     </Fragment>
   );
