@@ -1,6 +1,4 @@
-@import "../../../colors.scss";
 @import "../../../mixins";
-@import "../../../anim.scss";
 
 .card-wrapper {
     display: flex;
@@ -140,6 +138,7 @@
     }
 
     .card-wrapper__row {
+        align-items: center;
         flex-direction: column;
     }
 
@@ -154,10 +153,10 @@
         @include smooth();
     }
 
-    #guidelines,
-    #colab {
-        align-self: flex-end;
-    }
+    // #guidelines,
+    // #colab {
+    //     align-self: flex-end;
+    // }
 
     #brand_section {
         .section__embedded-content {

@@ -11,3 +11,41 @@
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
 }
+
+
+@mixin sinusoidal-animation($offset, $withRotate: false) {
+
+
+    @if $withRotate {
+        animation: sinusoidalWithRotate $animation-duration infinite ease-in-out $offset;
+    }
+
+    @else {
+        animation: sinusoidal $animation-duration infinite ease-in-out $offset;
+    }
+}
+
+
+@keyframes sinusoidalWithRotate {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg); // Adjust the amplitude of the sinusoidal motion
+    }
+}
+
+@keyframes sinusoidal {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px); // Adjust the amplitude of the sinusoidal motion
+    }
+}

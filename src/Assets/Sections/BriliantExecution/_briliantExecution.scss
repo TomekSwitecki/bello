@@ -1,3 +1,7 @@
+@import "../../../mixins";
+$animation-duration: 4s;
+$animation-offset: 1s;
+
 .construction_ilustration {
     position: relative;
     grid-column: 1 / span 12;
@@ -47,8 +51,9 @@
 
     .worker_3 {
         width: 45px;
-        left: 85%;
+        left: 82%;
         bottom: 0;
+        opacity: 0.5;
 
     }
 
@@ -79,6 +84,7 @@
         width: 100%;
         top: 30%;
         z-index: 10;
+        @include sinusoidal-animation($animation-offset*1/2);
     }
 }
 
@@ -87,12 +93,74 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 77.08%, #FFF 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 77.08%, #FFF 100%);
     width: 100%;
     height: 100%;
     z-index: 5;
 }
 
+.construction_ilustration--foreground {
+    img {
+        position: absolute;
+        z-index: 15;
+
+    }
+
+    .helmet {
+        width: 120px;
+        bottom: 10px;
+        transform: rotateZ(-45deg);
+        left: 0;
+        z-index: 2;
+        @include sinusoidal-animation($animation-offset*2);
+    }
+
+    .tape {
+        width: 100px;
+        bottom: 40px;
+        transform: rotateZ(15deg);
+        right: 55%;
+        z-index: 4;
+        @include sinusoidal-animation($animation-offset*2);
+    }
+
+    .screwdriver {
+        width: 136px;
+        bottom: 180px;
+        transform: rotateZ(135deg);
+        right: 60%;
+        @include sinusoidal-animation($animation-offset);
+    }
+
+    .hammer {
+        width: 156px;
+
+
+        bottom: 180px;
+        transform: rotateZ(-75deg);
+        left: 55%;
+        @include sinusoidal-animation($animation-offset*1.8);
+    }
+
+
+    .wrench {
+        width: 64px;
+        bottom: 36px;
+        transform: rotateZ(257deg);
+        right: 20%;
+        @include sinusoidal-animation($animation-offset*3/4);
+    }
+
+    .cone {
+        width: 144px;
+        bottom: 10px;
+        transform: rotateZ(15deg);
+        right: 0;
+        z-index: 4;
+        @include sinusoidal-animation($animation-offset*2);
+    }
+
+}
 
 
 

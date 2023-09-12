@@ -11,7 +11,13 @@ import Crane from "../../../Resources/Construction/Crane.png";
 import Crane2 from "../../../Resources/Construction/Crane2.png";
 import Crane3 from "../../../Resources/Construction/Crane3.png";
 import Worker from "../../../Resources/Construction/Worker.png";
-import Nails from "../../../Resources/Construction/Nails.png"
+import Nails from "../../../Resources/Construction/Nails.png";
+import Helmet from "../../../Resources/Construction/Helmet.png";
+import Screwdriver from "../../../Resources/Construction/Screwdriver.png";
+import Wrench from "../../../Resources/Construction/Wrench.png";
+import Tape from "../../../Resources/Construction/Tape.png";
+import Cone from "../../../Resources/Construction/Cone.png"
+import Hammer from "../../../Resources/Construction/Hammer.png"
 export function BriliantExcecution() {
 
     return (
@@ -25,6 +31,15 @@ export function BriliantExcecution() {
                 <img className="worker worker_2" src={Worker}></img>
                 <img className="worker worker_3" src={Worker}></img>
                 <img className="nails" src={Nails}></img>
+                <div className='construction_ilustration--foreground'>
+                    <img className="hammer" src={Hammer}></img>
+                    <img className="cone" src={Cone}></img>
+                    <img className="tape" src={Tape}></img>
+                    <img className="wrench" src={Wrench}></img>
+                    <img className="helmet" src={Helmet}></img>
+                    <img className="screwdriver" src={Screwdriver}></img>
+                </div>
+
             </div>
 
             <Section sectionTitle={title} sectionSubtitle={sectionSubtitle} id="design_section" dir="column" headingDir="row" justifyContent="center" >
