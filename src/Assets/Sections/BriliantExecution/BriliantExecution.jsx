@@ -1,12 +1,6 @@
 import React from 'react';
 import { Section } from "../../Components/Section/Section";
 import { title, sectionSubtitle, Card1_Title, Card1_Description, Card2_Title, Card2_Description, Card3_Title, Card3_Description, Card4_Title, Card4_Description } from "./const";
-import VerticalCard, { CardColor } from '../../Components/VerticalCard/VerticalCard';
-import digitalProccess from "../../../Resources/UIUXilustrations/digitalProccess.png";
-import workflow from "../../../Resources/UIUXilustrations/workflow.png";
-import debugging from "../../../Resources/UIUXilustrations/debugging.png";
-import design from "../../../Resources/UIUXilustrations/design.png";
-import PlainCard from '../../Components/PlainCard/PlainCard';
 import Crane from "../../../Resources/Construction/Crane.png";
 import Crane2 from "../../../Resources/Construction/Crane2.png";
 import Crane3 from "../../../Resources/Construction/Crane3.png";
@@ -18,6 +12,14 @@ import Wrench from "../../../Resources/Construction/Wrench.png";
 import Tape from "../../../Resources/Construction/Tape.png";
 import Cone from "../../../Resources/Construction/Cone.png"
 import Hammer from "../../../Resources/Construction/Hammer.png"
+import Tag from '../../Components/Tag/Tag';
+import OutlineCard from '../../Components/OutlineCard/OutlineCard';
+import execution1 from "../../../Resources/Execution/execution_1.png";
+import execution2 from "../../../Resources/Execution/execution_2.png";
+import execution3 from "../../../Resources/Execution/execution_3.png";
+import circles from "../../../Resources/Bloom/circles.png";
+import hollowCube from "../../../Resources/Bloom/hollow-cube.png";
+import cross from "../../../Resources/Bloom/cross.png";
 export function BriliantExcecution() {
 
     return (
@@ -42,7 +44,14 @@ export function BriliantExcecution() {
 
             </div>
 
-            <Section sectionTitle={title} sectionSubtitle={sectionSubtitle} id="design_section" dir="column" headingDir="row" justifyContent="center" >
+            <Section sectionTitle={title} id="execution_section" dir="column" headingDir="row" headingCentered >
+                <div className='card-wrapper'>
+                    <OutlineCard type="big" title={Card1_Title} backgroundImg={circles} imageSrc={execution1} tag={<Tag color="yellow" text="Step 1"></Tag>}></OutlineCard>
+                    <div className='card-wrapper__row'>
+                        <OutlineCard type="small" title={Card2_Title} description={Card2_Description} backgroundImg={hollowCube} imageSrc={execution2} tag={<Tag color="primary" text="Design Implementation"></Tag>}></OutlineCard>
+                        <OutlineCard type="small" title={Card3_Title} description={Card3_Description} backgroundImg={cross} imageSrc={execution3} tag={<Tag color="purple" text="Design System"></Tag>}></OutlineCard>
+                    </div>
+                </div>
             </Section>
         </React.Fragment>
     )

@@ -7,7 +7,7 @@ import { CTA } from "../CTA/CTA";
 export function Hero() {
     return (
         <React.Fragment>
-            <div className="hero__container">
+            <div id="hero__section" className="hero__container">
                 <CTA />
                 <div className="hero__ilustration">
                     <Multitasking className="hero__multitasking" />

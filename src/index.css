@@ -151,6 +151,7 @@
 
 .section__heading--centered {
   text-align: center;
+  justify-content: center;
 }
 
 .section__title {
@@ -223,15 +224,17 @@
 
 .marker::after {
   z-index: -1;
-  top: 20px;
+  top: -2px;
   left: 0;
+  right: 0;
   position: absolute;
   display: inline;
   content: "";
   width: 100%;
   min-width: 25px;
-  height: 36px;
-  padding-right: 10px;
+  height: 100%;
+  padding-right: 20px;
+  margin-left: -10px;
 }
 
 .marker--yellow::after {
@@ -240,6 +243,10 @@
 
 .marker--blue::after {
   background: #0FA0FF;
+}
+
+.marker--black::after {
+  background: #292F36;
 }
 
 @keyframes sinusoidalWithRotate {
@@ -653,22 +660,6 @@
   z-index: 4;
 }
 
-.plain-card:not(.plain-card--plain):before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.025;
-  background-size: 15%;
-  background-repeat: repeat;
-  background-image: url("/src/Resources/checkerpattern.png");
-  border-radius: 0;
-  z-index: 0;
-}
-
 .plain-card--small {
   width: 340px;
 }
@@ -1065,10 +1056,151 @@
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.1;
+  opacity: 0.03;
   background-image: url("/src/Resources/gridpattern.png");
   background-size: 25px;
   z-index: 0;
+}
+
+@keyframes sinusoidalWithRotate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+@keyframes sinusoidal {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.outline-card {
+  position: relative;
+  display: flex;
+  border-radius: 13px;
+  box-shadow: 0px 4px 33px 0px rgba(255, 255, 255, 0.25);
+  padding: 40px;
+  overflow: hidden;
+}
+
+.outline-card__ilustration {
+  z-index: 2;
+}
+
+.outline-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.66s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.outline-card__title {
+  font-family: Epilogue;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.outline-card__description {
+  color: #5E5E70;
+  font-family: Epilogue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.outline-card--big {
+  gap: 32px;
+  flex-direction: row;
+  background: #292F36;
+  align-items: center;
+}
+
+.outline-card--big .outline-card__title {
+  color: #FFFFFF;
+  font-family: Epilogue;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 130.5%;
+}
+
+.outline-card--big .outline-card__background {
+  position: absolute;
+  opacity: 0.1;
+  transform: rotateZ(90deg);
+  width: 100%;
+  height: auto;
+  top: -80%;
+  z-index: 1;
+}
+
+.outline-card--big .outline-card__ilustration {
+  max-width: 500px;
+  width: 100%;
+  height: min-content;
+  z-index: 2;
+}
+
+.outline-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.outline-card--big::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url("/src/Resources/gridpattern.png");
+  background-size: 35%;
+  z-index: 0;
+}
+
+.outline-card--small {
+  gap: 36px;
+  box-sizing: border-box;
+  height: auto;
+  width: 540px;
+  flex-direction: column-reverse;
+  border-radius: 13px;
+  border: 1px solid #292F36;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 33px 0px rgba(255, 255, 255, 0.25);
+}
+
+.outline-card--small .outline-card__title {
+  margin-bottom: 8px;
+}
+
+.outline-card--small .outline-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.outline-card--small .outline-card__ilustration {
+  max-width: 460px;
+  width: 100%;
+}
+
+.outline-card--small .outline-card__background {
+  position: absolute;
+  opacity: 0.12;
+  transform: rotateZ(90deg);
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 45%;
+  width: 420px;
 }
 
 @keyframes sinusoidalWithRotate {
@@ -1317,6 +1449,11 @@
     transform: translateY(-20px);
   }
 }
+#hero__section .marker {
+  top: 2px;
+  height: 64px;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -1603,6 +1740,7 @@
   flex-grow: 1;
   flex-direction: row;
   justify-content: space-between;
+  gap: 16px;
 }
 
 @media (max-width: 1024px) {
@@ -1872,6 +2010,49 @@
     transform: translateY(-20px);
   }
 }
+#execution_section .section__title {
+  font-size: 72px;
+}
+
+#execution_section .section__title::before,
+#execution_section .section__title::after {
+  position: relative;
+  color: #FFD900;
+  font-size: 80px;
+  font-weight: 800;
+}
+
+#execution_section .section__title::before {
+  content: "< ";
+}
+
+#execution_section .section__title::after {
+  content: " />";
+}
+
+#execution_section .marker .title--white {
+  color: white;
+}
+
+#execution_section .card-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #EBF0F9;
+  width: 100%;
+}
+
+#execution_section .card-wrapper__row {
+  display: flex;
+  flex-direction: row;
+}
+
+#execution_section .outline-card__title .marker {
+  mix-blend-mode: color;
+}
+
 .construction_ilustration {
   position: relative;
   grid-column: 1/span 12;
@@ -2046,6 +2227,37 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@media (max-width: 1024px) {
+  #execution_section .card-wrapper {
+    padding: 0;
+    background-color: unset;
+    transition: all 0.66s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  #execution_section .outline-card--big {
+    flex-direction: column;
+    align-items: left;
+  }
+  #execution_section .outline-card--small {
+    width: 100%;
+  }
+  #execution_section .outline-card--small .outline-card__background {
+    top: unset;
+  }
+  #execution_section .card-wrapper__row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 650px) {
+  #execution_section .section__title {
+    font-size: 64px;
+  }
+  #execution_section .section__title::before,
+  #execution_section .section__title::after {
+    content: "";
+    display: none;
   }
 }
 @keyframes sinusoidalWithRotate {

@@ -1,4 +1,5 @@
 @import "../../../mixins";
+
 .modern-card {
     position: relative;
     box-sizing: border-box;
@@ -15,7 +16,6 @@
     min-width: 360px;
     height: fit-content;
     overflow: hidden;
-
 
     &.modern-card--primary {
         background: $blue;
@@ -137,5 +137,5 @@
 }
 
 .modern-card--primary ::before {
-    @include grid-pattern('white', 25px, 0.1);
+    @include grid-pattern('white', 25px, 0.03);
 }

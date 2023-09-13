@@ -1,0 +1,129 @@
+@import "../../../mixins";
+
+.outline-card {
+    position: relative;
+    display: flex;
+
+    border-radius: 13px;
+
+    box-shadow: 0px 4px 33px 0px rgba(255, 255, 255, 0.25);
+    padding: 40px;
+
+    overflow: hidden;
+
+}
+
+
+.outline-card__ilustration {
+    z-index: 2;
+}
+
+.outline-card:hover {
+    @include hover;
+}
+
+.outline-card__title {
+    font-family: Epilogue;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.outline-card__description {
+    color: $text-gray;
+    font-family: Epilogue;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.outline-card--big {
+    gap: 32px;
+    flex-direction: row;
+    background: $primary-black;
+    align-items: center;
+
+    .outline-card__title {
+        color: $white;
+        font-family: Epilogue;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 130.5%;
+    }
+
+
+    .outline-card__background {
+        position: absolute;
+        opacity: 0.1;
+        transform: rotateZ(90deg);
+        width: 100%;
+        height: auto;
+        top: -80%;
+        z-index: 1;
+    }
+
+    .outline-card__ilustration {
+        max-width: 500px;
+        width: 100%;
+        height: min-content;
+        z-index: 2;
+    }
+}
+
+
+
+
+.outline-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+.outline-card--big::before {
+
+    @include grid-pattern(white, $size: 35%, $opacity: 0.2)
+}
+
+
+.outline-card--small {
+    gap: 36px;
+    box-sizing: border-box;
+    height: auto;
+    width: 540px;
+
+    flex-direction: column-reverse;
+    border-radius: 13px;
+    border: 1px solid $primary-black;
+    background: $white;
+    box-shadow: 0px 4px 33px 0px rgba(255, 255, 255, 0.25);
+
+    .outline-card__title {
+        margin-bottom: 8px;
+    }
+
+
+    .outline-card__content {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .outline-card__ilustration {
+        max-width: 460px;
+        width: 100%;
+    }
+
+
+    .outline-card__background {
+        position: absolute;
+        opacity: 0.12;
+        transform: rotateZ(90deg);
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 45%;
+        width: 420px;
+    }
+}

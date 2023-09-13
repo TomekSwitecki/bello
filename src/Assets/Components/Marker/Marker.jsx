@@ -4,6 +4,7 @@ import classNames from "classnames";
 export const MarkerColor = {
     Yellow: "yellow",
     Blue: "blue",
+    Black: "black"
 };
 
 export function Marker(props) {

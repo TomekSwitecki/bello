@@ -3,7 +3,12 @@ $animation-duration: 4s; // Duration of one complete animation cycle
 $animation-offset: 1s; // Time offset for individual image animations
 
 
-
+#hero__section {
+    .marker {
+        top: 2px;
+        height: 64px;
+    }
+}
 
 .hero {
     display: flex;

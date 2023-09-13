@@ -5,15 +5,17 @@
 
     &::after {
         z-index: -1;
-        top: 20px;
+        top: -2px;
         left: 0;
+        right: 0;
         position: absolute;
         display: inline;
         content: "";
         width: 100%;
         min-width: 25px;
-        height: 36px;
-        padding-right: 10px;
+        height: 100%;
+        padding-right: 20px;
+        margin-left: -10px;
     }
 
     &--yellow {
@@ -25,6 +27,12 @@
     &--blue {
         &::after {
             background: $blue;
+        }
+    }
+
+    &--black {
+        &::after {
+            background: $primary-black;
         }
     }
 }

@@ -5,6 +5,8 @@
     flex-grow: 1;
     flex-direction: row;
     justify-content: space-between;
+    gap: 16px;
+
 }
 
 @media (max-width: $laptop) {

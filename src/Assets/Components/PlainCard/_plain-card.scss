@@ -49,10 +49,6 @@
 
 }
 
-.plain-card:not(.plain-card--plain):before {
-    @include checker-pattern(0, 0.025, 15%);
-}
-
 
 .plain-card--small {
     width: 340px;
