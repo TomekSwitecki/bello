@@ -4,7 +4,7 @@ import { Marker, MarkerColor } from "../../Components/Marker/Marker";
 
 export const title = (
     <React.Fragment>
-        Briliant <Marker color={MarkerColor.Black}><span className="title--white">excecution</span></Marker>
+        Briliant <Marker color={MarkerColor.Black}><span className="text--white">excecution</span></Marker>
     </React.Fragment>
 );
 

@@ -81,11 +81,11 @@ $card-box-shadow: 0px -11px 0px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px r
 
     &--blue:before,
     &--red:before {
-        @include grid-pattern('white');
+        @include grid-pattern('white', 160px, 0.6);
     }
 
     &--yellow:before {
-        @include grid-pattern('black');
+        @include grid-pattern('black', 260px, 1);
     }
 
     .vertical-card__ilustration {

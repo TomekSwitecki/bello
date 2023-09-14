@@ -12,12 +12,14 @@
 
     background: $primary-light-gray;
     box-shadow: 0px 4px 0px 0px #E7E9EF;
+    @include smooth;
 
     .plain-card__ilustration {
         position: absolute;
         right: -40px;
         top: -9px;
         height: 168px;
+        @include smooth;
     }
 
     .plain-card__title {
@@ -106,6 +108,7 @@
         width: 280px;
         height: 300px;
         object-fit: contain;
+
     }
 }
 
@@ -117,10 +120,30 @@
 
 
 .plain-card:hover {
+
+
+    .plain-card__title {
+        color: $white;
+    }
+
+    .plain-card__description {
+        color: $text-white-text-light;
+    }
+
+
+    background-color: $primary-black;
     @include hover(false);
+
+    box-shadow: 0px 4px 0px 0px $text-gray;
 }
 
 .plain-card--plain:hover {
+    background: $white;
+
+    .plain-card__content {
+        background-color: $primary-black;
+    }
+
     @include hover(false);
     box-shadow: 0px 8px 0px 0px #000;
 }

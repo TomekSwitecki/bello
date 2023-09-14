@@ -4,8 +4,8 @@ import { Marker, MarkerColor } from "../../Components/Marker/Marker";
 
 export const title = (
     <React.Fragment>
-        ...but dont worry, <Marker> we got you covered </Marker>😌
-    </React.Fragment>
+        ...but dont worry, <Marker> we</Marker> <Marker>got</Marker> <Marker>you</Marker> <Marker>covered </Marker>😌
+    </React.Fragment >
 );
 export const subtitle =
     "We will help you to create the product of your dreams. Websites, apps, branding, logo. We got it all.";
