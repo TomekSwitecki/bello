@@ -1,0 +1,92 @@
+@import "../../../mixins";
+
+.pricing-card {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    min-width: 320px;
+    max-width: 420px;
+    padding: 24px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    height: fit-content;
+
+    border-radius: 17px;
+    border: 1px solid $primary-black;
+    background: $white;
+    overflow: hidden;
+    flex-basis: 50%;
+
+    .button {
+        z-index: 5;
+        width: 100%;
+    }
+
+    @include smooth;
+}
+
+.pricing-card__title,
+.pricing-card__description,
+.pricing-card__price {
+    z-index: 3;
+}
+
+.pricing-card__title {
+    color: $primary-black;
+    font-family: Epilogue;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.pricing-card__description {
+    color: $primary-black;
+    font-family: Epilogue;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pricing-card__price {
+    color: $primary-black;
+    font-family: Outfit;
+    font-size: 64px;
+    font-weight: 700;
+    margin-top: 12px;
+
+}
+
+.pricing-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pricing-card__labels {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    fill: $utils-green;
+}
+
+.pricing-card__background {
+    width: 240px;
+    position: absolute;
+    top: 140px;
+    right: 0px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.label__text {
+    font-weight: 500;
+}
+
+.pricing-card:hover {
+    @include smooth;
+    @include hover();
+}
+
+.pricing-card::before {
+    @include grid-pattern('black', 260px, 1);
+}

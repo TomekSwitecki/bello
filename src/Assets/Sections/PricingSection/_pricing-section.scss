@@ -1,0 +1,62 @@
+@import "../../../mixins";
+
+#pricing {
+    .section__embedded-content::before {
+        content: "";
+        position: absolute;
+        background-image: url(/src/Resources/UIUXilustrations/digitalProccess.png);
+        opacity: 0.05;
+        background-size: cover;
+        top: 144px;
+        width: 1440px;
+        max-width: 700px;
+        background-repeat: no-repeat;
+        height: 100%;
+        z-index: -1;
+
+        content: "";
+
+
+    }
+
+
+    .cards__container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+
+    }
+
+    @media (max-width: $tablet) {
+
+        .cards__container {
+            justify-content: center;
+            display: flex;
+            flex-grow: 1;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (max-width: $laptop) {
+        .section__embedded-content::before {
+            content: "";
+
+            background-size: 600px;
+            top: 525px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cards__container {
+            .pricing-card__background {
+
+                opacity: 0.15;
+                right: -20px;
+                @include smooth;
+            }
+        }
+    }
+
+}

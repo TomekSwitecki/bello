@@ -56,71 +56,81 @@
 
 @media (max-width: $high-res) {
 
-  .navbar__content {
-    gap: 16px;
-    align-items: normal;
-    padding: 24px 32px;
-  }
-
-  .navbar__buttons--right {
-    display: none;
-  }
-
-  .navbar__buttons--middle {
-    .button--primary {
-      display: flex;
+  .navbar {
+    .navbar__content {
+      gap: 16px;
+      align-items: normal;
+      padding: 24px 32px;
     }
 
-    justify-content: center;
+    .navbar__buttons--right {
+      display: none;
+    }
+
+    .navbar__buttons--middle {
+      .button--primary {
+        display: flex;
+      }
+
+      justify-content: center;
+    }
+
+    .button {
+      padding: 12px 12px;
+    }
+
+    .button--outlined {
+      display: none;
+    }
   }
 
-  .button {
-    padding: 12px 12px;
-  }
 
-  .button--outlined {
-    display: none;
-  }
 }
 
 @media (max-width: $tablet) {
+  .navbar {
+    .navbar__content {
+      flex-direction: column;
+    }
 
-  .navbar__content {
-    flex-direction: column;
+    .button--primary {
+      margin-left: 0;
+    }
+
+    .navbar__buttons--middle {
+      justify-content: space-between;
+    }
   }
 
-  .button--primary {
-    margin-left: 0;
-  }
 
-  .navbar__buttons--middle {
-    justify-content: space-between;
-  }
 }
 
 
 @media (max-width: $small-tablet) {
-  .navbar__buttons--middle {
-    // display: none;
-    opacity: 0;
-    position: absolute;
-    transform: translateY(-50px);
+  .navbar {
+    .navbar__buttons--middle {
+      // display: none;
+      opacity: 0;
+      position: absolute;
+      transform: translateY(-50px);
+    }
+
+    .navbar__content {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .hamburger {
+      position: relative;
+      transform: translateY(0);
+      display: flex;
+      opacity: 1;
+      @include smooth;
+    }
+
+    .button {
+      padding: 12px 12px;
+    }
   }
 
-  .navbar__content {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .hamburger {
-    position: relative;
-    transform: translateY(0);
-    display: flex;
-    opacity: 1;
-    @include smooth;
-  }
-
-  .button {
-    padding: 12px 12px;
-  }
 }
