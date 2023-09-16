@@ -2,6 +2,30 @@
 @import "colors";
 @import "mixins";
 
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $text-gray;
+  border-radius: 99px;
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: $primary-light-gray;
+
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #aaa;
+}
+
+a {
+  color: unset;
+}
+
 img {
   pointer-events: none;
   user-select: none;
@@ -38,7 +62,12 @@ h2 {
 
 .text--white {
 
-  color: white;
+  color: $white;
+}
+
+.text--primary {
+
+  color: $bello-primary;
 }
 
 .bello_container {
@@ -82,4 +111,10 @@ h2 {
       opacity: 0%;
     }
   }
+}
+
+.toastBody {
+  font-family: Epilogue;
+
+  font-size: 16px !important;
 }

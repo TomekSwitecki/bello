@@ -1,0 +1,54 @@
+@import "../../../mixins";
+
+.complex_label {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 24px;
+}
+
+.complex_label__title,
+.complex_label__description,
+.complex_label__content {
+    color: $primary-black;
+    font-family: Epilogue;
+    font-style: normal;
+    line-height: normal;
+}
+
+.complex_label__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.complex_label__title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.complex_label__description {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.complex_label__content {
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: $blue;
+}
+
+.complex_label__prepend {
+    width: fit-content;
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+    gap: 10px;
+
+    border-radius: 10px;
+    border: 2px solid $card-ilustration-outline;
+}

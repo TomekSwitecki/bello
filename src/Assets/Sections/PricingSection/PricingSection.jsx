@@ -8,7 +8,15 @@ import Button, { ButtonType, ButtonColor } from "../../Components/Button/Button"
 import { Label } from "../../Components/Label/Label";
 import quotation from "../../../Resources/Afterclap/quotation.png";
 import greetings from "../../../Resources/Afterclap/greetings.png";
+import { _scrollTo } from "../../../utils";
 export function PricingSection() {
+
+    const handleScrollToId = (id, offset) => {
+        const element = document.getElementById(id);
+        if (element) {
+            _scrollTo(id, offset);
+        }
+    };
 
     const lables1 = <React.Fragment>
         <Label prepend={<box-icon name='check-circle' type='solid' flip='horizontal' animation='tada' ></box-icon>} text={Card1_Label_1}></Label>
@@ -30,6 +38,7 @@ export function PricingSection() {
                         type={ButtonType.Filled}
                         color={ButtonColor.Primary}
                         text={Card1_Button}
+                        onClick={() => handleScrollToId("contact_section", 0)}
                     />}
                         labels={lables1}
                         backgroundImg={greetings}
@@ -38,6 +47,7 @@ export function PricingSection() {
                         type={ButtonType.Outlined}
                         color={ButtonColor.Black}
                         text={Card2_Button}
+                        onClick={() => handleScrollToId("contact_section", 0)}
                     />}
                         labels={lables1}
                         backgroundImg={quotation}

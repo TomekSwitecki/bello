@@ -44,7 +44,7 @@ export function BriliantExcecution() {
 
             </div>
 
-            <Section sectionTitle={title} id="execution_section" dir="column" headingDir="row" headingCentered >
+            <Section sectionTitle={title} id="development_section" dir="column" headingDir="row" headingCentered >
                 <div className='card-wrapper'>
                     <OutlineCard type="big" title={Card1_Title} backgroundImg={circles} imageSrc={execution1} tag={<Tag color="yellow" text="Step 1"></Tag>}></OutlineCard>
                     <div className='card-wrapper__row'>

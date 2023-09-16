@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-const PricingCard = ({ id, tag, title, description, price, labels, button, backgroundImg }) => {
+const PricingCard = ({ id, tag, title, description, price, labels, button, backgroundImg, action }) => {
 
 
     return (

@@ -1,7 +1,7 @@
 // const.js
 import React from "react";
 import { Marker, MarkerColor } from "../../Components/Marker/Marker";
-
+import { Trans } from 'react-i18next';
 export const title = (
     <React.Fragment>
         What do we <Marker>do?</Marker>

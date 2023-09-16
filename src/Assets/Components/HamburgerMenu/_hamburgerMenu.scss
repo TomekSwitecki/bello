@@ -27,15 +27,14 @@
 .hamburger__dropdown {
 
   position: absolute;
-
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
   right: 0;
-  border-radius: 8px;
-  position: absolute;
+  border-radius: 0;
   top: 100px;
 
   display: flex;
   flex-direction: column;
-  gap: 42px;
+  gap: 36px;
   background: $white;
   border: 1px solid $outline;
   padding: 24px;

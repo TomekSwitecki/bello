@@ -1,4 +1,5 @@
 @import "../../../mixins";
+
 .button {
     cursor: pointer;
     font-family: Outfit;
@@ -15,7 +16,7 @@
             color: $bello-secondary;
             border: 2px solid $bello-secondary;
             background: $bello-primary;
-            box-shadow: 0px 4px 0px 0px #163B40;
+            box-shadow: 0px 4px 0px 0px $bello-secondary;
 
             fill: $bello-secondary;
         }
@@ -24,7 +25,25 @@
             color: $white;
             border: 2px solid $primary-black-darker;
             background: $primary-black;
-            box-shadow: 0px 4px 0px 0px #23282E;
+            box-shadow: 0px 4px 0px 0px $primary-black-darker;
+
+            fill: $white;
+        }
+
+        &.button--secondary {
+            color: $white;
+            border: 2px solid $primary-black-darker;
+            background: $bello-secondary;
+            box-shadow: 0px 4px 0px 0px $primary-black-darker;
+
+            fill: $white;
+        }
+
+        &.button--blue {
+            color: $white;
+            border: 2px solid $primary-black-darker;
+            background: $blue;
+            box-shadow: 0px 4px 0px 0px $primary-black-darker;
 
             fill: $white;
         }

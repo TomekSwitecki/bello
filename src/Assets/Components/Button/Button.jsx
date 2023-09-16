@@ -10,10 +10,12 @@ export const ButtonType = {
 export const ButtonColor = {
     Primary: "primary",
     Black: "black",
+    Secondary: "secondary",
+    Blue: "blue"
 };
 
 function Button(props) {
-    const { type, color, text, append, onClick } = props;
+    const { type, color, text, append, onClick, submit } = props;
 
     const colorClass = color ? `button--${color}` : '';
     const appendedClass = append ? 'button__appended' : '';
@@ -22,7 +24,7 @@ function Button(props) {
 
 
     return (
-        <button className={buttonClass} onClick={onClick}>
+        <button className={buttonClass} onClick={onClick} type={submit ? "submit" : "button"}>
             <div className="button__text">{text}</div>
             {/* <div className="button__append">{append}</div> */}
         </button>

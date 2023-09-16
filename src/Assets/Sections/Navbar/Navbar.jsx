@@ -9,6 +9,7 @@ import { NavbarOptions } from "./NavbarOptions";
 
 
 export function Navbar() {
+
   return (
     <nav className="navbar">
       <div className="navbar__content">

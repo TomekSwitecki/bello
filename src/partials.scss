@@ -1,8 +1,11 @@
 @use "../src/Assets/Components/Heading/heading";
 @use "../src/Assets/Components/Button/button";
+@use "../src//Assets/Components/ToggleButton/toggleButton";
+@use "../src/Assets/Components/Inputfield/Inputfield";
 @use "../src/Assets/Components/Section/section";
 @use "../src//Assets/Components/Marker/marker";
 @use "../src/Assets/Components/Label/label";
+@use "../src/Assets/Components/ComplexLabel/complexLabel";
 @use "../src/Assets/Components/VerticalCard/vertical-card";
 @use "../src/Assets/Components/IconAvatar/icon-avatar";
 @use "../src/Assets/Components/Bubble/bubble";
@@ -25,4 +28,6 @@
 @use "../src/Assets/Sections/DesignSection/designSection";
 @use "../src/Assets/Sections/BriliantExecution/briliantExecution";
 @use "../src/Assets/Sections/PricingSection/pricing-section";
+@use "../src/Assets/Sections/ContactSection/contact";
+@use "../src/Assets/Sections/Footer/footer";
 @use "../src/mixins";

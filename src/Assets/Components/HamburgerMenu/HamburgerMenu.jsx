@@ -42,8 +42,9 @@ const HamburgerMenu = (props) => {
           className={`hamburger__dropdown ${isMenuOpen ? "hamburger__dropdown--active" : ""
             }`}
         >
-          {props.options}
+          {/* {props.options} */}
           {/* {NavbarOptions({ closeMenu })} */}
+          {React.cloneElement(props.options, { closeMenu })}
         </div>
       )}
     </React.Fragment>

@@ -3,7 +3,7 @@ $animation-duration: 4s;
 $animation-offset: 1s;
 
 
-#execution_section {
+#development_section {
 
 
     .section__title {
@@ -254,7 +254,7 @@ $animation-offset: 1s;
 
 
 @media (max-width: $laptop) {
-    #execution_section {
+    #development_section {
         .card-wrapper {
             padding: 0;
             background-color: unset;
@@ -284,7 +284,7 @@ $animation-offset: 1s;
 
 
 @media (max-width: $small-tablet) {
-    #execution_section {
+    #development_section {
         .section__title {
             font-size: 64px;
         }

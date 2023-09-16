@@ -1,0 +1,75 @@
+@import "../../../mixins";
+
+.inputfield {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    textarea {
+        resize: none;
+        height: 120px;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $bello-secondary;
+        border-radius: 0px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: $bello-secondary__inputfield_bg;
+    }
+
+    ::-webkit-scrollbar-track:hover {
+        background-color: #aaa;
+    }
+
+
+}
+
+.input {
+    display: flex;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 12px 24px;
+    background-color: rgba(0, 0, 0, 0.082);
+    color: $bello-secondary;
+    font-family: Outfit;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 3px solid $bello-secondary;
+
+}
+
+
+.inputfield__label {
+    color: $bello-secondary;
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 700;
+
+    opacity: 0.8;
+}
+
+
+.input:hover,
+.input:focus {
+    outline: 1px solid $bello-secondary;
+    background: $white;
+    color: $bello-secondary;
+    cursor: text;
+    border-bottom: 3px solid $bello-secondary;
+    @include smooth;
+}
+
+
+.input::placeholder {
+    font-weight: 400;
+    opacity: 0.8;
+}

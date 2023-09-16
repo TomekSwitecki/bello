@@ -5,6 +5,7 @@ import Button, { ButtonType, ButtonColor } from "../../Components/Button/Button"
 import useTypingText from '../../CustomHooks/useTypingText';
 import Sparkle from "../../Ilustrations/Sparkle";
 import { Label } from "../../Components/Label/Label";
+import { _scrollTo } from "../../../utils";
 
 export function CTA() {
     const { word } = useTypingText(['solutions', 'UI/UX', 'Brands'], 130, 20);
@@ -24,11 +25,13 @@ export function CTA() {
                     type={ButtonType.Filled}
                     color={ButtonColor.Primary}
                     text="Get in touch!"
+                    onClick={() => _scrollTo("contact_section")}
                 />
                 <Button
                     type={ButtonType.Outlined}
                     color={ButtonColor.Black}
                     text="Learn more"
+                    onClick={() => _scrollTo("about_us", 120)}
                 />
             </div>
             <div className="cta__lables_container">

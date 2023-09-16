@@ -10,6 +10,9 @@ import { BrandSection } from "./Assets/Sections/BrandSection/BrandSection";
 import { DesignSection } from "./Assets/Sections/DesignSection/DesignSection";
 import { BriliantExcecution } from "./Assets/Sections/BriliantExecution/BriliantExecution";
 import { PricingSection } from "./Assets/Sections/PricingSection/PricingSection";
+import { Footer } from "./Assets/Sections/Footer/Footer";
+import { Contact } from "./Assets/Sections/ContactSection/Contact";
+import { ToastContainer } from 'react-toastify';
 function App() {
   return (
     <Fragment>
@@ -25,7 +28,22 @@ function App() {
         <DesignSection />
         <BriliantExcecution />
         <PricingSection />
+        <Contact />
       </div >
+      <Footer />
+      <ToastContainer
+        bodyClassName="toastBody"
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </Fragment>
   );
 }

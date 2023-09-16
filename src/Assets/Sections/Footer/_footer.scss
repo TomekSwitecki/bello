@@ -1,0 +1,234 @@
+@import "../../../mixins";
+
+.footer {
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    background: $footer-background ;
+    width: 100%;
+    display: flex;
+    height: 370px;
+    z-index: 15;
+    justify-content: center;
+    border-bottom: 2px solid $outline;
+    @include grid-width(12);
+    @include smooth;
+    justify-content: space-between;
+    margin-top: 80px;
+
+    .input:not(:hover, :focus-within) {
+        color: $white;
+        border-bottom: 1px solid $white;
+    }
+
+    .input:hover::placeholder {
+        color: $bello-secondary;
+    }
+
+    .input:focus::placeholder {
+        color: $text-gray;
+    }
+
+    .input::placeholder {
+        color: $text-white-text-light;
+    }
+
+
+}
+
+.footer::after {
+    @include grid-pattern('white', 400px, 0.2);
+}
+
+.footer__carousel {
+    position: relative;
+    height: 72px;
+    background: $footer-darker-accent;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: $white;
+    font-family: Epilogue;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    z-index: 1;
+    opacity: 1;
+}
+
+.footer__copyrights {
+    color: $text-white-text-light;
+    font-family: Epilogue;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    height: fit-content;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    background: $footer-darker-accent;
+
+    p {
+        opacity: 0.7;
+    }
+
+}
+
+
+.footer__content {
+    padding: 30px 80px;
+    max-width: 1440px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    align-self: center;
+    justify-content: space-between;
+
+    .footer_ilustration--bg {
+        mix-blend-mode: luminosity;
+
+        position: absolute;
+        @include smooth;
+    }
+
+    .footer_ilustration--1 {
+        top: -10%;
+        right: -15%;
+        position: absolute;
+    }
+
+    .footer_ilustration--2 {
+        top: 25%;
+        right: 35%;
+        position: absolute;
+    }
+}
+
+.footer__content--left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer__content--right {
+    max-width: 400px;
+}
+
+.footer__info {
+    color: $text-white-text-light;
+    font-family: Epilogue;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    max-width: 435px;
+}
+
+.footer__links {
+
+    display: flex;
+    gap: 24px;
+
+}
+
+.footer__link {
+    fill: $bello-primary;
+    opacity: 0.6;
+
+    // &--disabled {
+    //     fill: $bello-primary;
+    //     opacity: 0.2;
+    // }
+}
+
+
+.footer__link:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.scrolling-text {
+    white-space: nowrap;
+    animation: scrollLeft 20s linear infinite;
+}
+
+.scrolling-text--2 {
+    white-space: nowrap;
+    animation: scrollLeft 20s linear infinite;
+    animation-delay: 20s;
+    transform: translateX(-200%);
+}
+
+
+.footer__newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.newsletter__title {
+    color: $text-white-text-light;
+    font-family: Epilogue;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.newsletter__consent {
+    color: $bello-primary;
+    font-family: Epilogue;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    opacity: 0.5;
+}
+
+.newsletter__input {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: end;
+
+    .button {
+        width: 116px;
+        padding: 12px 24px;
+        margin-bottom: 2px;
+    }
+}
+
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: $laptop) {
+
+    .footer__content {
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .footer {
+
+        height: unset;
+    }
+
+    .footer_ilustration--1 {
+        display: none;
+    }
+}
