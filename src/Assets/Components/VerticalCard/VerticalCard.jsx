@@ -9,7 +9,7 @@ export const CardColor = {
     Yellow: "yellow",
 };
 
-const VerticalCard = ({ title, imageSrc, description, color, iconAvatar, action }) => {
+const VerticalCard = ({ title, imageSrc, description, color, iconAvatar, action,buttonText }) => {
 
 
     const cardClass = `vertical-card vertical-card--${color}`;
@@ -24,7 +24,7 @@ const VerticalCard = ({ title, imageSrc, description, color, iconAvatar, action 
                 <Button
                     type={ButtonType.Filled}
                     color={ButtonColor.Primary}
-                    text="Learn more!"
+                    text={buttonText}
                     onClick={action}
                 />
             </div>

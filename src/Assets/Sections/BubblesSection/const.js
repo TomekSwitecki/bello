@@ -9,11 +9,15 @@ export const title = (
 );
 export const subtitle = {
     en: "Developing digital product is hard.\nThere’s plenty things to take care of, and many things can go wrong...",
-    fr: "Le développement de produits numériques est difficile.%lineBreak%Il y a tellement de choses à prendre en compte, et de nombreuses choses peuvent mal tourner..."
+    pl: "Tworzenie oprogramowania jest trudne.\nTrzeba wziąć pod uwagę mnóstwo rzeczy, a wiele z nich może sprawić problemy..."
 };
 
-export const subtitle_ = (
+export const subtitle_en = (
     <StringWithLineBreaks text={subtitle.en} />
+);
+
+export const subtitle_pl = (
+    <StringWithLineBreaks text={subtitle.pl} />
 );
 
 

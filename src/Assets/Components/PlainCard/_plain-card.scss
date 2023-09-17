@@ -26,7 +26,7 @@
         color: $primary-black;
         font-size: 24px;
         font-weight: 600;
-
+        word-break: break-word;
         text-align: left;
 
     }
@@ -78,7 +78,7 @@
 
     .plain-card__title {
         color: $primary-black;
-
+        word-break: break-word;
         font-size: 32px;
         font-weight: 600;
 

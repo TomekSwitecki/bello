@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Section } from '../../Components/Section/Section';
 import { Bubble } from '../../Components/Bubble/Bubble';
 import { dots, emojis } from './const';
-import { title, subtitle, subtitle_ } from './const';
+import { subtitle_en, subtitle_pl } from './const';
 import { getRandomInt, getRandomFloat } from "../../../utils";
-
+import { useTranslation } from 'react-i18next';
 function BubblesSection() {
+    const { t, i18n } = useTranslation();
+    const userLanguage = i18n.language;
 
 
-    const List = [
+    const List_en = [
         { name: '🎨 Design a user interface', offsetY: 0, animationDelay: '0s' },
         { name: '🛠️ Code a new feature', offsetY: -90, animationDelay: '1s' },
-        { name: '📱 Mobile app optimization', offsetY: 90, animationDelay: '2.5s' },
+        { name: '📱 Mobile responsiveness', offsetY: 90, animationDelay: '2.5s' },
         { name: '📚 Learn a new design tool', offsetY: -160, animationDelay: '3s' },
         { name: '📊 Analyze user metrics', offsetY: 180, animationDelay: '8.2s' },
         { name: '💡 Brainstorm new ideas', offsetY: 180, animationDelay: '-1s' },
@@ -35,7 +37,35 @@ function BubblesSection() {
         { name: '🛠️ Develop a responsive layout', offsetY: 90, animationDelay: '-10s' },
     ];
 
+    const List_pl = [
+        { name: '🎨 Projektowanie interfejsu użytkownika', offsetY: 0, animationDelay: '0s' },
+        { name: '🛠️ Kodowanie nowej funkcji', offsetY: -90, animationDelay: '1s' },
+        { name: '📱 Responsywność mobilna', offsetY: 90, animationDelay: '2.5s' },
+        { name: '📚 Uczenie się nowego narzędzia do projektowania', offsetY: -160, animationDelay: '3s' },
+        { name: '📊 Analiza metryk użytkowników', offsetY: 180, animationDelay: '8.2s' },
+        { name: '💡 Burza mózgów nad nowymi pomysłami', offsetY: 180, animationDelay: '-1s' },
+        { name: '🔍 Przeprowadzanie badań użytkowników', offsetY: 180, animationDelay: '-4s' },
+        { name: '🧪 Testowanie A/B funkcji', offsetY: -30, animationDelay: '-3.8s' },
+        { name: '🌐 Responsywność strony internetowej', offsetY: -70, animationDelay: '-8s' },
+        { name: '🔧 Debugowanie i naprawianie', offsetY: 70, animationDelay: '-4.2s' },
+        { name: '📄 Pisanie dokumentacji technicznej', offsetY: 90, animationDelay: '-0.5s' },
+        { name: '💬 Przegląd projektu UX', offsetY: 50, animationDelay: '-15s' },
+        { name: '📐 Tworzenie szkiców', offsetY: 0, animationDelay: '-17.5s' },
+        { name: '🔍 Testowanie użyteczności', offsetY: -100, animationDelay: '-14s' },
+        { name: '📊 Wizualizacja danych', offsetY: -70, animationDelay: '-17s' },
+        { name: '🌈 Wybór schematu kolorów', offsetY: 100, animationDelay: '-19s' },
+        { name: '🔍 Mapowanie podróży użytkownika', offsetY: -150, animationDelay: '-16.4s' },
+        { name: '🚀 Wprowadzanie nowej funkcji', offsetY: -170, animationDelay: '-13s' },
+        { name: '🔧 Rozwiązywanie problemów zgodności z przeglądarkami', offsetY: -185, animationDelay: '-2.5s' },
+        { name: '📝 Pisanie czystego kodu', offsetY: 0, animationDelay: '-9s' },
+        { name: '🔍 Audyt dostępności', offsetY: -150, animationDelay: '-9.2s' },
+        { name: '📈 Optymalizacja wydajności', offsetY: 0, animationDelay: '4s' },
+        { name: '🔍 Analiza opinii użytkowników', offsetY: -30, animationDelay: '-12s' },
+        { name: '🛠️ Rozwijanie responsywnego układu', offsetY: 90, animationDelay: '-10s' },
+    ]
 
+    const bubblesList = userLanguage === 'pl' ? List_pl : List_en;
+    const subtitle = userLanguage === 'pl' ? subtitle_pl : subtitle_en;
 
     const renderBubble = ({ name, offsetY, animationDelay }) => {
         const clientHeight = 430;
@@ -55,11 +85,22 @@ function BubblesSection() {
         );
     };
 
+
+    const sectionTitle = userLanguage === "pl" ? (
+        <React.Fragment>
+            😬 Tyle rzeczy do wzięcia pod uwagę...
+        </React.Fragment>
+    ) : (
+        <React.Fragment>
+            😬 Soo many things to consider...
+        </React.Fragment>
+    );
+
     return (
         <React.Fragment>
             <Section
-                sectionTitle={title}
-                sectionSubtitle={subtitle_}
+                sectionTitle={sectionTitle}
+                sectionSubtitle={subtitle}
                 id="bubbles"
                 dir="column"
                 headingDir="column"
@@ -67,7 +108,7 @@ function BubblesSection() {
                 headingCentered
             >
                 <div className='bubble-container'>
-                    {List.map((itemList) => (
+                    {bubblesList.map((itemList) => (
                         renderBubble(itemList)
                     ))}
                 </div>

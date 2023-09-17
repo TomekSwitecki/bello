@@ -2,8 +2,18 @@
 import React, { Fragment, useState } from "react";
 import Button, { ButtonType, ButtonColor } from "../../Components/Button/Button";
 import { _scrollTo } from "../../../utils";
-
+import { useTranslation } from 'react-i18next';
+import en from "../../../Resources/en.png";
+import pl from "../../../Resources/pl.png";
 export const NavbarOptions = ({ closeMenu, isHamburgerMenu }) => {
+    const { t, i18n } = useTranslation();
+
+    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+        setSelectedLanguage(lng);
+    };
     const handleScrollToId = (id, offset) => {
         const element = document.getElementById(id);
         if (element) {
@@ -19,23 +29,23 @@ export const NavbarOptions = ({ closeMenu, isHamburgerMenu }) => {
                 <div className="navbar__buttons--middle">
                     <Button
                         type={ButtonType.Ghost}
-                        text="Branding"
+                        text={t('0_navbar_1')}
                         onClick={() => handleScrollToId("brand_section", 220)}
                     />
                     <Button
                         type={ButtonType.Ghost}
-                        text="UI/UX Design"
+                        text={t('0_navbar_2')}
                         onClick={() => handleScrollToId("design_section", 220)}
                     />
                     <Button
                         type={ButtonType.Ghost}
-                        text="Development"
+                        text={t('0_navbar_3')}
                         onClick={() => handleScrollToId("development_section", 520)}
                     />
                     <Button
                         type={ButtonType.Filled}
                         color={ButtonColor.Primary}
-                        text="Get in touch with us!"
+                        text={t("get_in_touch")}
                         onClick={() => handleScrollToId("contact_section")}
                     />
                 </div>
@@ -45,16 +55,21 @@ export const NavbarOptions = ({ closeMenu, isHamburgerMenu }) => {
                     <Button
                         type={ButtonType.Outlined}
                         color={ButtonColor.Black}
-                        text="Learn more"
+                        text={t('learn_more')}
                         onClick={() => handleScrollToId("about_us", 220)}
                     />
                     <Button
                         type={ButtonType.Filled}
                         color={ButtonColor.Primary}
-                        text="Get in touch with us!"
+                        text={t("get_in_touch")}
                         onClick={() => handleScrollToId("contact_section")}
                     />
                 </div>
+                <div className="language-selectors">
+                    <button onClick={() => changeLanguage('en')} className={`language-selector ${selectedLanguage === 'en' ? 'language-selector--selected' : ''}`}><img src={en}></img></button>
+                    <button onClick={() => changeLanguage('pl')} className={`language-selector ${selectedLanguage === 'pl' ? 'language-selector--selected' : ''}`}><img src={pl}></img></button>
+                </div>
+
             </Fragment>
         );
     }
@@ -64,25 +79,25 @@ export const NavbarOptions = ({ closeMenu, isHamburgerMenu }) => {
                 <Button
                     type={ButtonType.Outlined}
                     color={ButtonColor.Black}
-                    text="Branding"
+                    text={t('0_navbar_1')}
                     onClick={() => handleScrollToId("brand_section", 70)}
                 />
                 <Button
                     type={ButtonType.Outlined}
                     color={ButtonColor.Black}
-                    text="UI/UX Design"
+                    text={t('0_navbar_2')}
                     onClick={() => handleScrollToId("design_section", 70)}
                 />
                 <Button
                     type={ButtonType.Outlined}
                     color={ButtonColor.Black}
-                    text="Development"
+                    text={t('0_navbar_3')}
                     onClick={() => handleScrollToId("development_section", 70)}
                 />
                 <Button
                     type={ButtonType.Filled}
                     color={ButtonColor.Primary}
-                    text="Get in touch with us!"
+                    text={t("get_in_touch")}
                     onClick={() => handleScrollToId("contact_section")}
                 />
             </Fragment>);

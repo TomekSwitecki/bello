@@ -32,11 +32,11 @@ export function WhatDoWeDo() {
 
     return (
         <React.Fragment>
-            <Section sectionTitle={titleTranslation()} sectionSubtitle={t('subtitle')} id="about_us" dir="column" headingDir="row" justifyContent="center" >
+            <Section sectionTitle={titleTranslation()} sectionSubtitle={t('2_subtitle')} id="about_us" dir="column" headingDir="row" justifyContent="center" >
                 <div className='cards_container'>
-                    <VerticalCard action={() => handleScrollToId("brand_section", 220)} iconAvatar={<IconAvatar color={AvatarColor.Yellow} icon={<PencilPaper />} />} color={CardColor.Blue} title={t('card1_title')} description={t('card1_description')} imageSrc={digitalProccess}></VerticalCard>
-                    <VerticalCard action={() => handleScrollToId("design_section", 220)} iconAvatar={<IconAvatar color={AvatarColor.Blue} icon={<Anchor />} />} color={CardColor.Red} title={t('card2_title')} description={t('card2_description')} imageSrc={newFunctions}></VerticalCard>
-                    <VerticalCard action={() => handleScrollToId("development_section", 220)} iconAvatar={<IconAvatar color={AvatarColor.Purple} icon={<CodingWebsite />} />} color={CardColor.Yellow} title={t('card3_title')} description={t('card3_description')} imageSrc={debugging}></VerticalCard>
+                    <VerticalCard action={() => handleScrollToId("brand_section", 220)} iconAvatar={<IconAvatar color={AvatarColor.Yellow} icon={<PencilPaper />} />} color={CardColor.Blue} title={t('2_Card1_Title')} description={t('2_Card1_Description')} imageSrc={digitalProccess} buttonText={t('learn_more')}></VerticalCard>
+                    <VerticalCard action={() => handleScrollToId("design_section", 220)} iconAvatar={<IconAvatar color={AvatarColor.Blue} icon={<Anchor />} />} color={CardColor.Red} title={t('2_Card2_Title')} description={t('2_Card2_Description')} imageSrc={newFunctions} buttonText={t('learn_more')}></VerticalCard>
+                    <VerticalCard action={() => handleScrollToId("development_section", 220)} iconAvatar={<IconAvatar color={AvatarColor.Purple} icon={<CodingWebsite />} />} color={CardColor.Yellow} title={t('2_Card3_Title')} description={t('2_Card3_Description')} imageSrc={debugging} buttonText={t('learn_more')}></VerticalCard>
                 </div>
             </Section>
         </React.Fragment>
