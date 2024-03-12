@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bello/static/css/main.4cb0e47d.css",
+    "main.css": "/bello/static/css/main.94ade6f2.css",
     "main.js": "/bello/static/js/main.a500f36e.js",
     "static/media/cross.png": "/bello/static/media/cross.33e4572198be157a297f.png",
     "static/media/hollow-cube.png": "/bello/static/media/hollow-cube.a1624d01d36569210b95.png",
@@ -42,11 +42,11 @@
     "static/media/message.svg": "/bello/static/media/message.a69ef6ff0d676556f6a0e49418eb99c9.svg",
     "static/media/sparkle.svg": "/bello/static/media/sparkle.51269b3619420f9875fae13fc0582180.svg",
     "index.html": "/bello/index.html",
-    "main.4cb0e47d.css.map": "/bello/static/css/main.4cb0e47d.css.map",
+    "main.94ade6f2.css.map": "/bello/static/css/main.94ade6f2.css.map",
     "main.a500f36e.js.map": "/bello/static/js/main.a500f36e.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cb0e47d.css",
+    "static/css/main.94ade6f2.css",
     "static/js/main.a500f36e.js"
   ]
 }
